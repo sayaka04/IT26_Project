@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Book Vault</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap Links and Sources -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JavaScript and CSS -->
+  <link rel="stylesheet" href="../CSS/style-portal.css">
+  <script src="../JavaScript/user.js"></script>
+
+  
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <!-- for convenience in development -->
+    <!-- Reusable Code for navigation bar BOOTSTRAP -->
+    <!-- Defined by Custom JavaScript -->
+    <my-nav></my-nav>
+
+
+
+    
+
+     <div class="d-flex" id="wrapper">
+
+
+        
+
+      <div class="border-end"  id="sidebar-wrapper">
+
+        <!-- Side Bar -->
+        <!-- for convenience in development -->
+        <!-- REUSABLE CODE for SideBar -->
+        <!-- Defined by Custom JavaScript -->
+        <my-side-bar></my-side-bar>
+
+      </div>
+
+      <!-- Page content -->
+      <div id="page-content-wrapper">
+          <div class="container-fluid container_outer ">
+
+            <div class="sidebar-icon" onclick="show()"><i class="bi bi-list"></i></div>
+
+            <div class="container-fluid container_inner p-5 text-center">
+              
+              <!-- Main content here -->
+
+            <!-- BOOKS TABLE -->
+            <div class="table-responsive-md">
+
+                <h3>Pending for Approval Transaction</h3>
+
+                <table class="table table-dark">
+                  <caption>The Book Vault books table</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Book ID</th>
+                      <th scope="col">Book Title</th>
+                      <th scope="col">Author</th>
+                      <th scope="col">Published Date</th>
+                      <th scope="col">DDC Class</th>
+                      <th scope="col">Class Number</th>
+                      <th scope="col">Available</th>
+                      <th scope="col">Copies</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">1</th>
+                      <td>Physics 1</td>
+                      <td>Mark Jacob</td>
+                      <td>1992-12-25</td>
+                      <td>Class 500 – Science</td>
+                      <td>530</td>
+                      <td>true</td>
+                      <td>5</td>
+                    </tr>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">2</th>
+                      <td>Biology 4</td>
+                      <td>Bruce Thomas</td>
+                      <td>2014-05-22</td>
+                      <td>Class 500 – Science</td>
+                      <td>570</td>
+                      <td>true</td>
+                      <td>3</td>
+                    </tr>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">3</th>
+                      <td>Lord of the rings: Fellowship of the rings</td>
+                      <td>J.R.R. Tolkien</td>
+                      <td>1954-07-29</td>
+                      <td>Class 800 – Literature</td>
+                      <td>823</td>
+                      <td>true</td>
+                      <td>1</td>
+                    </tr>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">4</th>
+                      <td>Twilight</td>
+                      <td>Stephenie Meyer</td>
+                      <td>2005-09-27</td>
+                      <td>Class 800 – Literature</td>
+                      <td>813</td>
+                      <td>true</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+    
+            <!-- BOOKS TABLE -->
+            <div class="table-responsive-md">
+
+                <h3>Approved</h3>
+
+                <table class="table table-dark">
+                  <caption>The Book Vault books table</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Book ID</th>
+                      <th scope="col">Book Title</th>
+                      <th scope="col">Author</th>
+                      <th scope="col">Published Date</th>
+                      <th scope="col">DDC Class</th>
+                      <th scope="col">Class Number</th>
+                      <th scope="col">Available</th>
+                      <th scope="col">Copies</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">1</th>
+                      <td>Physics 1</td>
+                      <td>Mark Jacob</td>
+                      <td>1992-12-25</td>
+                      <td>Class 500 – Science</td>
+                      <td>530</td>
+                      <td>true</td>
+                      <td>5</td>
+                    </tr>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">2</th>
+                      <td>Biology 4</td>
+                      <td>Bruce Thomas</td>
+                      <td>2014-05-22</td>
+                      <td>Class 500 – Science</td>
+                      <td>570</td>
+                      <td>true</td>
+                      <td>3</td>
+                    </tr>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">3</th>
+                      <td>Lord of the rings: Fellowship of the rings</td>
+                      <td>J.R.R. Tolkien</td>
+                      <td>1954-07-29</td>
+                      <td>Class 800 – Literature</td>
+                      <td>823</td>
+                      <td>true</td>
+                      <td>1</td>
+                    </tr>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">4</th>
+                      <td>Twilight</td>
+                      <td>Stephenie Meyer</td>
+                      <td>2005-09-27</td>
+                      <td>Class 800 – Literature</td>
+                      <td>813</td>
+                      <td>true</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            <!-- BOOKS TABLE -->
+            <div class="table-responsive-md">
+
+                <h3>Rejected</h3>
+
+                <table class="table table-dark">
+                  <caption>The Book Vault books table</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Book ID</th>
+                      <th scope="col">Book Title</th>
+                      <th scope="col">Author</th>
+                      <th scope="col">Published Date</th>
+                      <th scope="col">DDC Class</th>
+                      <th scope="col">Class Number</th>
+                      <th scope="col">Available</th>
+                      <th scope="col">Copies</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">1</th>
+                      <td>Physics 1</td>
+                      <td>Mark Jacob</td>
+                      <td>1992-12-25</td>
+                      <td>Class 500 – Science</td>
+                      <td>530</td>
+                      <td>true</td>
+                      <td>5</td>
+                    </tr>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">2</th>
+                      <td>Biology 4</td>
+                      <td>Bruce Thomas</td>
+                      <td>2014-05-22</td>
+                      <td>Class 500 – Science</td>
+                      <td>570</td>
+                      <td>true</td>
+                      <td>3</td>
+                    </tr>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">3</th>
+                      <td>Lord of the rings: Fellowship of the rings</td>
+                      <td>J.R.R. Tolkien</td>
+                      <td>1954-07-29</td>
+                      <td>Class 800 – Literature</td>
+                      <td>823</td>
+                      <td>true</td>
+                      <td>1</td>
+                    </tr>
+                    <tr onclick="u_getBookValues(this)">
+                      <th scope="row">4</th>
+                      <td>Twilight</td>
+                      <td>Stephenie Meyer</td>
+                      <td>2005-09-27</td>
+                      <td>Class 800 – Literature</td>
+                      <td>813</td>
+                      <td>true</td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+            
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+</body>
+</html>
